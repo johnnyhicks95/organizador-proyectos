@@ -4,7 +4,7 @@ import NuevoProyecto from '../proyectos/NuevoProyecto';
 
 export const Sidebar = () => {
     return (
-        <aside>
+        <aside className="aside" >
            <h1> MERN <span>Tasks</span> </h1> 
            <NuevoProyecto  />
 
