@@ -54,7 +54,7 @@ export const NuevoProyecto = () => {
                         onSubmit={onSubmitProyecto}
                     >
                         <input type="text"
-                            classname="input-text"
+                            className="input-text"
                             placeholder="Nombre Proyecto"
                             name="nombre"
                             value={nombre}
@@ -62,7 +62,7 @@ export const NuevoProyecto = () => {
                         />
                         <input
                             type="submit"
-                            classname="btn btn-primario btn-block"
+                            className="btn btn-primario btn-block"
                             value="Agregar Proyecto"
                         />
                     </form>
