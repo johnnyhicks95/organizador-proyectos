@@ -6,7 +6,7 @@ export const Barra = () => {
            <p className="nombre-usuario" > Hola <span>John</span> </p> 
 
            <nav className="nav-principal" >
-               <a href="#!" > Cerra sersión </a>
+               <a href="#!" > Cerrar sersión </a>
            </nav>
         </header>
     )
