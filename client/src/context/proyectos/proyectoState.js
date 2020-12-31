@@ -1,10 +1,12 @@
 // contiene las funciones con dispatch para el context
 import React, { useReducer } from 'react'
+import uuid from 'uuid'
 import proyectoContext from './proyectoContext'
 import proyectoReducer from './proyectoReducer'
 import  { 
     FORMULARIO_PROYECTO ,
-    OBTENER_PROYECTOS
+    OBTENER_PROYECTOS,
+    AGREGAR_PROYECTO
     } from '../../types'
 
 
@@ -40,6 +42,17 @@ export const ProyectoState = ( props ) => {
          })
     }
 
+    // Agregar nuevo proyecto
+    const agregarProyecto = proyecto => {
+        proyecto.id = uuid.v4(); // agrega un id
+
+        // inserta el proyecto en el state
+        dispatch({
+            type: AGREGAR_PROYECTO,
+            payload: proyecto 
+        })
+    }
+
     return (
         <proyectoContext.Provider 
             value={{
@@ -49,7 +62,8 @@ export const ProyectoState = ( props ) => {
 
                 // funciomes
                 mostrarFormulario, 
-                obtenerProyectos
+                obtenerProyectos,
+                agregarProyecto
             }}
         >
             { props.children }
